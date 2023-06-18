@@ -60,15 +60,18 @@ function generatePassword() {
 
   }
 
-  var randomPassword = ""
+  
+  var generatedPassword = ""
 
   for (var i = 0; i < userLength; i++) {
-    randomPassword = randomPassword + userSelection[Math.floor(Math.random() * userSelection.length)];
-    console.log(randomPassword)
+    generatedPassword = generatedPassword + userSelection[Math.floor(Math.random() * userSelection.length)];
+    /* turning userSelection array into the length of the password - and using the random tag to choose random characters based on selection */
   }
-  return randomPassword;
+  
+  return generatedPassword;
 
-}
+  }
+
 
 // Write password to the #password input
 function writePassword() {
