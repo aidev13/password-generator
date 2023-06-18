@@ -33,7 +33,6 @@ function generatePassword() {
   var confirmUpperCase = confirm("DO you want uppercase characters?")
   var confirmNum = confirm("Do you want numbers?")
   var confirmSpecial = confirm("Do you want special characters?")
-  var repeat = confirmLowerCase, confirmUpperCase, confirmNum, confirmSpecial
 
   if (confirmLowerCase) {
     userSelection = userSelection.concat(lowerCase)
@@ -53,9 +52,10 @@ function generatePassword() {
 
   if (confirmLowerCase != true && confirmUpperCase != true && confirmNum != true && confirmSpecial != true) {
     alert("ERROR! You must choose at least one selection. Try again")
-
-    repeat;
-console.log(generatePassword)
+    var confirmLowerCase = confirm("Do you want lowercase characters?")
+    var confirmUpperCase = confirm("DO you want uppercase characters?")
+    var confirmNum = confirm("Do you want numbers?")
+    var confirmSpecial = confirm("Do you want special characters?")
 
   }
 
