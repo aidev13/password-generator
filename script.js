@@ -16,16 +16,50 @@ function generatePassword() {
   // Length Prompt
   var userLength = prompt("Choose the character length for your password. Length must be between 8 and 128 characters.")
 
-  if (userLength <= 7 || userLength >= 129) {
+  if (userLength <= 7 || userLength >= 128) {
     alert("Try again. You MUST choose a character length between 8 and 128.")
-    var userLength = prompt("Choose a password length betweeen 8 and 129 characters.")
+    var userLength = prompt("Choose a password length betweeen 8 and 128 characters.")
 
   }
 
-   // This code will alert the user of their choice
-   alert(`You have choosen to use ${userLength} chacacters.`)
-   // Need to use backticks " ` " to display a var in a string. aka template literals...
+  // This code will alert the user of their choice
+  alert(`You have choosen to use ${userLength} chacacters.`)
+  // Need to use backticks " ` " to display a var in a string. aka template literals...
 
+  // series of prommpt required by critia
+  var userSelection = []
+
+  var confirmLowerCase = confirm("Do you want lowercase characters?")
+  var confirmUpperCase = confirm("DO you want uppercase characters?")
+  var confirmNum = confirm("Do you want numbers?")
+  var confirmSpecial = confirm("Do you want special characters?")
+  var repeat = confirmLowerCase, confirmUpperCase, confirmNum, confirmSpecial
+
+  if (confirmLowerCase) {
+    userSelection = userSelection.concat(lowerCase)
+  }
+
+  if (confirmUpperCase) {
+    userSelection = userSelection.concat(upperCase)
+  }
+
+  if (confirmNum) {
+    userSelection = userSelection.concat(num)
+  }
+
+  if (confirmSpecial) {
+    userSelection = userSelection.concat(specialCharacter)
+  }
+
+  if (confirmLowerCase != true && confirmUpperCase != true && confirmNum != true && confirmSpecial != true) {
+    alert("ERROR! You must choose at least one selection. Try again")
+
+    repeat;
+console.log(generatePassword)
+
+  }
+
+  return("hello")
 }
 
 // Write password to the #password input
