@@ -50,8 +50,9 @@ function generatePassword() {
     userSelection = userSelection.concat(specialCharacter)
   }
 
+  // If no selection was made - return and run code again...
   if (confirmLowerCase != true && confirmUpperCase != true && confirmNum != true && confirmSpecial != true) {
-    alert("ERROR! You must choose at least one selection. Try again")
+    alert("ERROR! You must choose at least one selection. Try again.")
     var confirmLowerCase = confirm("Do you want lowercase characters?")
     var confirmUpperCase = confirm("DO you want uppercase characters?")
     var confirmNum = confirm("Do you want numbers?")
@@ -59,7 +60,14 @@ function generatePassword() {
 
   }
 
-  return("hello")
+  var randomPassword = ""
+
+  for (var i = 0; i < userLength; i++) {
+    randomPassword = randomPassword + userSelection[Math.floor(Math.random() * userSelection.length)];
+    console.log(randomPassword)
+  }
+  return randomPassword;
+
 }
 
 // Write password to the #password input
