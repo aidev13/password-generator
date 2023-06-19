@@ -17,34 +17,34 @@ function generatePassword() {
   // Length Prompt
   var userLength = prompt("Choose the character length for your password. Length must be between 8 and 128 characters.")
 
- 
-// loop is a while loop. code goes until user makes correct selection
+
+  // loop is a while loop. code goes until user makes correct selection
   while (userLength <= 7 || userLength >= 128 || isNaN(userLength)) {
     alert("Try again. You MUST choose a character length between 8 and 128.")
     var userLength = prompt("Choose a password length betweeen 8 and 128 characters.")
   }
 
-  
+
 
 
   // This code will alert the user of their choice
   alert(`You have choosen to use ${userLength} chacacters.`)
   // Need to use backticks " ` " to display a var in a string. aka template literals...
 
-  // series of prompts required by critia
+  // series of prompts required by criteria
   var userSelection = []
 
   var confirmLowerCase = confirm("Do you want lowercase characters?")
   var confirmUpperCase = confirm("Do you want uppercase characters?")
   var confirmNum = confirm("Do you want numbers?")
   var confirmSpecial = confirm("Do you want special characters?")
-  // If no selection was made - return and run code again...
+  // While Loop - If no selection was made - return and run code again until a section is made.
   while (confirmLowerCase != true && confirmUpperCase != true && confirmNum != true && confirmSpecial != true) {
     alert("ERROR! You must choose at least one selection. Try again.")
-    var confirmLowerCase = confirm("Do you want lowercase characters?")
-    var confirmUpperCase = confirm("DO you want uppercase characters?")
-    var confirmNum = confirm("Do you want numbers?")
-    var confirmSpecial = confirm("Do you want special characters?")
+    var confirmLowerCase = confirm("Do you want lowercase characters? 'Ok' = Yes, 'Cancel' = No")
+    var confirmUpperCase = confirm("DO you want uppercase characters? 'Ok' = Yes, 'Cancel' = No")
+    var confirmNum = confirm("Do you want numbers? 'Ok' = Yes, 'Cancel' = No")
+    var confirmSpecial = confirm("Do you want special characters? 'Ok' = Yes, 'Cancel' = No")
 
   }
 
