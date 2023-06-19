@@ -10,7 +10,7 @@ var specialCharacter = [..."~!@#$%^&*<>?"]
 var userLength = ""
 
 // Function to create prompts 
-// This function was missing from started code given
+// This function was missing from starter code given
 function generatePassword() {
   // Welcome Alert
   alert("Welcome. This Generator will ask you a series of questions. Answer them to best fit your preference. Lets begin!")
