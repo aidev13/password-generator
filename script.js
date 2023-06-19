@@ -31,7 +31,7 @@ function generatePassword() {
   var userSelection = []
 
   var confirmLowerCase = confirm("Do you want lowercase characters?")
-  var confirmUpperCase = confirm("DO you want uppercase characters?")
+  var confirmUpperCase = confirm("Do you want uppercase characters?")
   var confirmNum = confirm("Do you want numbers?")
   var confirmSpecial = confirm("Do you want special characters?")
   // If no selection was made - return and run code again...
