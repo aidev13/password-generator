@@ -18,7 +18,7 @@ function generatePassword() {
   var userLength = prompt("Choose the character length for your password. Length must be between 8 and 128 characters.")
 
  
-
+// loop is a while loop. code goes until user makes correct selection
   while (userLength <= 7 || userLength >= 128 || isNaN(userLength)) {
     alert("Try again. You MUST choose a character length between 8 and 128.")
     var userLength = prompt("Choose a password length betweeen 8 and 128 characters.")
@@ -39,7 +39,7 @@ function generatePassword() {
   var confirmNum = confirm("Do you want numbers?")
   var confirmSpecial = confirm("Do you want special characters?")
   // If no selection was made - return and run code again...
-  if (confirmLowerCase != true && confirmUpperCase != true && confirmNum != true && confirmSpecial != true) {
+  while (confirmLowerCase != true && confirmUpperCase != true && confirmNum != true && confirmSpecial != true) {
     alert("ERROR! You must choose at least one selection. Try again.")
     var confirmLowerCase = confirm("Do you want lowercase characters?")
     var confirmUpperCase = confirm("DO you want uppercase characters?")
