@@ -9,7 +9,8 @@ var num = [..."0123456789"]
 var specialCharacter = [..."~!@#$%^&*<>?"]
 var userLength = ""
 
-// Function to create prompts
+// Function to create prompts 
+// This function was missing from started code given
 function generatePassword() {
   // Welcome Alert
   alert("Welcome. This Generator will ask you a series of questions. Answer them to best fit your preference. Lets begin!")
@@ -26,7 +27,7 @@ function generatePassword() {
   alert(`You have choosen to use ${userLength} chacacters.`)
   // Need to use backticks " ` " to display a var in a string. aka template literals...
 
-  // series of prommpt required by critia
+  // series of prompts required by critia
   var userSelection = []
 
   var confirmLowerCase = confirm("Do you want lowercase characters?")
@@ -43,6 +44,7 @@ function generatePassword() {
 
   }
 
+  // Users makes confirmed selections
   if (confirmLowerCase) {
     userSelection = userSelection.concat(lowerCase)
   }
@@ -68,7 +70,7 @@ function generatePassword() {
     generatedPassword = generatedPassword + userSelection[Math.floor(Math.random() * userSelection.length)];
     /* turning userSelection array into the length of the password - and using the random tag to choose random characters based on selection */
   }
-
+  // returns the users selections
   return generatedPassword;
 
 }
