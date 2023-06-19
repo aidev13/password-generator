@@ -102,6 +102,16 @@ You are required to submit the following for review:
 
 - - -
 
+## Required links and screenshot
+
+* Deployed Site:https://aidev13.github.io/password-generator/
+* Developer Github Account:https://github.com/aidev13
+* Github Repo Link: https://github.com/aidev13/password-generator
+
+* Screenshot: ![Screenshot of webpage](./images/password-gen-ss.png)
+
+
+
 
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
