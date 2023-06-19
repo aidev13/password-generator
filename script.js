@@ -21,6 +21,9 @@ function generatePassword() {
   // loop is a while loop. code goes until user makes correct selection
   // isNaN if number is not chosen rerun code
   while (userLength <= 7 || userLength >= 128 || isNaN(userLength)) {
+    if (userLength === null){
+      return('Press "Generate Password" to start over.')
+    }
     if (isNaN(userLength)){
       alert("You must pick a NUMBER between 8 and 128.")
     } else
@@ -33,7 +36,7 @@ function generatePassword() {
 
   // This code will alert the user of their choice
   alert(`You have choosen to use ${userLength} chacacters.`)
-  // Need to use backticks " ` " to display a var in a string. aka template literals...
+// Need to use backticks " ` " in place of quotes to display a var in a string. aka template literals... ${}
 
   // series of prompts required by criteria
   var userSelection = []
