@@ -13,7 +13,7 @@ var userLength = ""
 // This function was missing from starter code given
 function generatePassword() {
   // Welcome Alert
-  alert("Welcome. This Generator will ask you a series of questions. Answer them to best fit your preference. Lets begin!")
+  alert("Welcome! This Generator will ask you a series of questions and will randomly combined your choices. Lets begin!")
   // Length Prompt
   var userLength = prompt("Choose the character length for your password. Length must be between 8 and 128 characters.")
 
