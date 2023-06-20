@@ -62,23 +62,14 @@ function generatePassword() {
 
   if (confirmUpperCase) {
     userSelection = userSelection.concat(upperCase)
-    // if (lowerCase === true){
-    //   userSelection = userSelection.concat(lowerCase, upperCase)
-    // }
   }
 
   if (confirmNum) {
     userSelection = userSelection.concat(num)
-    // if (upperCase === true){
-    //   userSelection = userSelection.concat(lowerCase, upperCase, num)
-    // }
   }
 
   if (confirmSpecial) {
     userSelection = userSelection.concat(specialCharacter)
-    // if (num === true){
-    //   userSelection = userSelection.concat(lowerCase, upperCase, num, specialCharacter)
-    // }
   }
 
 
