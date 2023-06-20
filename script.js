@@ -20,7 +20,7 @@ function generatePassword() {
 
   // loop is a while loop. code goes until user makes correct selection
   // isNaN if number is not chosen rerun code
-  while (userLength <= 7 || userLength >= 128 || isNaN(userLength)) {
+  while (userLength <= 7 || userLength >= 129 || isNaN(userLength)) {
     if (userLength === null){
       return('Press "Generate Password" to start over.')
     }
