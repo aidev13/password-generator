@@ -21,13 +21,13 @@ function generatePassword() {
   // loop is a while loop. code goes until user makes correct selection
   // isNaN if number is not chosen rerun code
   while (userLength <= 7 || userLength >= 129 || isNaN(userLength)) {
-    if (userLength === null){
-      return('Press "Generate Password" to start over.')
+    if (userLength === null) {
+      return ('Press "Generate Password" to start over.')
     }
-    if (isNaN(userLength)){
+    if (isNaN(userLength)) {
       alert("You must pick a NUMBER between 8 and 128.")
     } else
-    alert("Try again. You MUST choose a character length between 8 and 128.")
+      alert("Try again. You MUST choose a character length between 8 and 128.")
     var userLength = prompt("Choose a password length betweeen 8 and 128 characters.")
   }
 
@@ -36,7 +36,7 @@ function generatePassword() {
 
   // This code will alert the user of their choice
   alert(`You have choosen to use ${userLength} chacacters.`)
-// Need to use backticks " ` " in place of quotes to display a var in a string. aka template literals... ${}
+  // Need to use backticks " ` " in place of quotes to display a var in a string. aka template literals... ${}
 
   // series of prompts required by criteria
   var userSelection = []
@@ -62,14 +62,23 @@ function generatePassword() {
 
   if (confirmUpperCase) {
     userSelection = userSelection.concat(upperCase)
+    if (lowerCase === true){
+      userSelection = userSelection.concat(lowerCase, upperCase)
+    }
   }
 
   if (confirmNum) {
     userSelection = userSelection.concat(num)
+    if (upperCase === true){
+      userSelection = userSelection.concat(lowerCase, upperCase, num)
+    }
   }
 
   if (confirmSpecial) {
     userSelection = userSelection.concat(specialCharacter)
+    if (num === true){
+      userSelection = userSelection.concat(lowerCase, upperCase, num, specialCharacter)
+    }
   }
 
 
